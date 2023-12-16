@@ -1,4 +1,4 @@
-- creating query with recersed symbols and without polish signed reversed
+-- creating query with recersed symbols and without polish signed reversed
 
 SELECT
     nazwisko,
