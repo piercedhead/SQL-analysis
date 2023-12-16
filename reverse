@@ -1,6 +1,31 @@
-select
-nazwisko,
-replace(nazwisko, 'Ł', 'L') rep,
-reverse(nazwisko) rev,
-reverse(replace(nazwisko, 'Ł', 'l')) revrep
-from PRACOWNICY
+- creating query with recersed symbols and without polish signed reversed
+
+SELECT
+    nazwisko,
+    replace(nazwisko, 'Ł', 'L')          rep,
+    reverse(nazwisko)                    rev,
+    reverse(replace(nazwisko, 'Ł', 'l')) revrep
+FROM
+    pracownicy
+
+NAZWISKO        REP             REV             REVREP         
+--------------- --------------- --------------- ---------------
+NOWAK           NOWAK           KAWON           KAWON          
+JURASIK         JURASIK         KISARUJ         KISARUJ        
+SŁOWIK          SLOWIK          KIWO?S          KIWOlS         
+KOWALSKI        KOWALSKI        IKSLAWOK        IKSLAWOK       
+MIODEK          MIODEK          KEDOIM          KEDOIM         
+PLASTYK         PLASTYK         KYTSALP         KYTSALP        
+MODRY           MODRY           YRDOM           YRDOM          
+UFO             UFO             OFU             OFU            
+RATOS           RATOS           SOTAR           SOTAR          
+KOMORNIK        KOMORNIK        KINROMOK        KINROMOK       
+KACZKA          KACZKA          AKZCAK          AKZCAK         
+
+NAZWISKO        REP             REV             REVREP         
+--------------- --------------- --------------- ---------------
+CZARNY          CZARNY          YNRAZC          YNRAZC         
+ZIELONY         ZIELONY         YNOLEIZ         YNOLEIZ        
+JUPITER         JUPITER         RETIPUJ         RETIPUJ        
+
+14 rows selected. 
