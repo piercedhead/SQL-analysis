@@ -3,4 +3,4 @@ nazwisko,
 replace(nazwisko, 'Ł', 'L') rep,
 reverse(nazwisko) rev,
 reverse(replace(nazwisko, 'Ł', 'l')) revrep
-FROM PRACOWNICY
+from PRACOWNICY
