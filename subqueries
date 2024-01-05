@@ -2,8 +2,20 @@ select * from employees
 where department_id = (select department_id from departments
                         where department_name = 'Administration')
 
-\\
 EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
 ----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
         200 Jennifer             Whalen                    JWHALEN                   515.123.4444         87/09/17 AD_ASST          4400                       101            10
 
+\
+select * from employees
+where department_id IN (select department_id from departments
+                        where department_name IN ('Administration', 'IT'))
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        103 Alexander            Hunold                    AHUNOLD                   590.423.4567         90/01/03 IT_PROG          9000                       102            60
+        104 Bruce                Ernst                     BERNST                    590.423.4568         91/05/21 IT_PROG          6000                       103            60
+        105 David                Austin                    DAUSTIN                   590.423.4569         97/06/25 IT_PROG          4800                       103            60
+        106 Valli                Pataballa                 VPATABAL                  590.423.4560         98/02/05 IT_PROG          4800                       103            60
+        107 Diana                Lorentz                   DLORENTZ                  590.423.5567         99/02/07 IT_PROG          4200                       103            60
+        200 Jennifer             Whalen                    JWHALEN                   515.123.4444         87/09/17 AD_ASST          4400                       101            10
