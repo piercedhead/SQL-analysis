@@ -1,0 +1,9 @@
+select * from employees
+where department_id = (select department_id from departments
+                        where department_name = 'Administration')
+
+\\
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        200 Jennifer             Whalen                    JWHALEN                   515.123.4444         87/09/17 AD_ASST          4400                       101            10
+
